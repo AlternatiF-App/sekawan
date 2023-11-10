@@ -3,12 +3,12 @@ import { HiChevronDown } from 'react-icons/hi'
 const Header = () => {
   return (
     <nav className='py-6 px-4'>
-      <div className='container mx-auto w-10/12'>
+      <div className='container mx-auto w-full lg:w-10/12'>
         <h1 className='text-4xl font-extralight'>Restaurants</h1>
-        <span className='block mt-4 font-extralight w-full lg:w-1/2'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore modi dolor, cum quas eveniet distinctio. Repellendus earum enim dolore culpa assumenda eveniet esse iure voluptatibus itaque, deserunt odio adipisci doloremque!</span>
+        <span className='block mt-4 font-extralight w-full lg:w-2/3 xl:w-1/2'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore modi dolor, cum quas eveniet distinctio. Repellendus earum enim dolore culpa assumenda eveniet esse iure voluptatibus itaque, deserunt odio adipisci doloremque!</span>
       </div>
       <div className='mt-4 py-6 px-4 border-y border-gray-400/50'>
-        <div className='container mx-auto w-10/12 flex justify-between items-center'>
+        <div className='container mx-auto w-full lg:w-10/12 flex justify-between items-center'>
           <div className='flex items-center space-x-8'>
             <span>Filter By:</span>
             <button
