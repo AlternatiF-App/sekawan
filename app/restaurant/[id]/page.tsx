@@ -37,7 +37,6 @@ const DetailPage = () => {
     })
       .then((results) => {
         setReviews(results.data.data)
-        console.log('cok', results.data.data)
       })
   }
 
