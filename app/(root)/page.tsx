@@ -1,6 +1,6 @@
-'use client'
+"use client"
 
-import CardRestaurant from '@/components/card-restaurant'
+import CardRestaurant from '@/components/card-retaurant'
 import axios from 'axios'
 import { useEffect, useState } from 'react'
 
@@ -12,7 +12,7 @@ const Home = () => {
     await axios.get(`https://travel-advisor.p.rapidapi.com/restaurants/list/?location_id=297705&limit=${limit}&currency=USD`, {
       headers: {
         'content-type': 'application/json',
-        'X-RapidAPI-Key': '564acb2c3cmsh08fdd079bc6f745p19e200jsn0ac5a09eba9e',
+        'X-RapidAPI-Key': 'fa9961b872msh604419c7e4c4a9bp16df07jsnb1faa2a21f39',
         'X-RapidAPI-Host': 'travel-advisor.p.rapidapi.com'
       },
     })
@@ -22,7 +22,7 @@ const Home = () => {
   }
 
   const handleLoadMore = () => {
-    setLimit((p:number) => p + 8)
+    setLimit((p: number) => p + 8)
   }
 
   useEffect(() => {
@@ -30,10 +30,10 @@ const Home = () => {
   }, [limit])
 
   return (
-    <main className='py-8 px-4'>
+    <main className='md:py-8 py-2 px-8 mx-auto'>
       <h1 className='text-2xl font-extralight'>All Restaurants</h1>
 
-      <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-8'>
+      <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-8'>
         {
           data?.filter((item: any) => item.detail !== '0').map((item: any, index: number) => (
             <CardRestaurant key={index} data={item} />
@@ -42,7 +42,7 @@ const Home = () => {
       </div>
       <div className='flex justify-center my-6 w-full'>
         <button
-          className='rounded-md w-80 border border-blue-950 text-blue-950 uppercase px-4 py-2'
+          className='rounded-md md:w-80 w-64 border border-blue-950 text-blue-950 uppercase px-4 py-2'
           onClick={() => handleLoadMore()}
         >
           Load More

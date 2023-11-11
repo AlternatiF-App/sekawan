@@ -4,7 +4,6 @@ import { ClerkProvider } from '@clerk/nextjs'
 import { Nunito } from 'next/font/google'
 import { dark } from '@clerk/themes'
 import Navbar from '@/components/Navbar/page'
-import Header from '@/components/header'
 
 
 const nunito = Nunito({ subsets: ['latin'] })
@@ -28,10 +27,9 @@ export default function RootLayout({
       <html lang="en">
         <body className={nunito.className}>
           <Navbar />
-          <Header />
           <main className='container mx-auto'>
             <div className='flex items-start justify-center min-h-screen'>
-              <div>{children}</div>
+              <div className='mt-20'>{children}</div>
             </div>
           </main>
         </body>
